@@ -44,6 +44,17 @@ public class InventoryService {
                         .countryCode(inv.getCountryCode())
                         .isInStock(inv.getQuantity() > 0)
                 ).toList();
+
+
+//        return inventoryRepo.findBySkuCodeIn(skuCode).stream()
+//                .map(inventory ->
+//                        InventoryResponse.builder()
+//                                .countryCode(inventory.getCountryCode())
+//                                .isInStock(inventory.getQuantity() > 0)
+//                                .build()
+//                ).toList();
+
+
     }
 
 }

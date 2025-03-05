@@ -37,9 +37,9 @@ public class OrderController {
 //    public Order placeOrder(@RequestBody OrderRequest orderRequest){
 //       return this.orderService.CreateOrder(orderRequest);
 //    }
-    public CompletableFuture<Order> placeOrder(@RequestBody OrderRequest orderRequest) {
+    public CompletableFuture<String> placeOrder(@RequestBody OrderRequest orderRequest) {
         log.info("Placing Order");
-        return CompletableFuture.supplyAsync(() -> orderService.CreateOrder(orderRequest));
+        return CompletableFuture.supplyAsync(() -> orderService.placeOrder(orderRequest));
     }
 
 
